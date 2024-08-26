@@ -1,0 +1,24 @@
+﻿@model CLDV_MVC_Birds.Models.Birder
+
+@{
+    ViewData["Title"] = "AddBirder";
+}
+
+<h1>AddBirder</h1>
+<form asp-action="AddBirder" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Birder_Name"></label>
+        <input asp-for="Birder_Name"  class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" type="password" />
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add Birder</button>
+
+</form>

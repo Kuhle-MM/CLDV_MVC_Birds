@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CLDV_MVC_Birds.Models.Sighting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Register">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Birder_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bird_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sighting_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sighting_Location)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+            <tr>
+            
+                <td>
+                    @Html.DisplayFor(modelItem => item.Birder_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bird_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sighting_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sighting_Location)
+                </td>
+            
+            </tr>
+        }
+    </tbody>
+</table>
